@@ -1,0 +1,104 @@
+<!------------------------------------------------------------
+- Author: Jacob Call
+- Application: Pantry App
+- Language: NODEjs
+- Class: cs313
+- Assignment: Project Two
+- Date: 11/22/2018
+------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pantry App Home</title>
+        <link rel="stylesheet" type="text/css" href="css/main_css.css" />
+        <script src="pantry-clientside.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="container" class="container">
+            
+            <div id="header" class="header">
+                <h1>Welcome to your pantry!</h1>
+            </div>
+            
+            <div id=main-body class="main-body">
+                
+                <div id="add-controls" class="controller1">
+                    <h3>Add a item to your pantry!</h3>
+                    <span>Pantry Item Name:</span>
+                    <br/>
+                    <input type="text" id="itemName" placeholder="Name">
+                    <br/>
+                    <br/>
+                    <span>Expiration Month:</span>
+                    <br/>
+                    <input type="text" id="exMonth" placeholder="Expiration Month">
+                    <br/>
+                    <br/>
+                    <span>Expiration Year:</span>
+                    <br/>
+                    <input type="number" id="exYear" placeholder="Expiration Year">
+                    <br/>
+                    <br/>
+                    <button onclick="addItem()">Add Item!</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+                
+                <div id="add-controls" class="controller2">
+                    <h3>Add a Recipe to your pantry!</h3>
+                    <span>Recipe Name:</span>
+                    <br/>
+                    <input type="text" id="recipeName" placeholder="Recipe Name">
+                    <br/>
+                    <br/>
+                    <span>Ingredients:</span>
+                    <br/>
+                    <textarea name="ingrediants" rows="4" cols="40" id="ingrediants" placeholder="Ingrediants">
+                    </textarea>
+                    <br/>
+                    <br/>
+                    <span>Instructions:</span>
+                    <br/>
+                    <textarea name="instructions" rows="4" cols="40" id="instructions" placeholder="instructions">
+                    </textarea>
+                    <br/>
+                    <br/>
+                    <button onclick="addRecipe()">Add Recipe!</button>
+                    <br/>
+                    <br/>
+                </div>
+                
+                <div id="search-controls" class="controller3">
+                    <h3 style="color: black;">Search</h3>
+                    <input type="text" id="name" placeholder="Pantry Item Name">
+                    <br/>
+                    <button onclick="searchByItem()">Search By Item Name</button>
+                    <br/>
+                    <br/>
+                    <input type="text" id="expirationMonth" placeholder="Expiration Month">
+                    <button onclick="searchByExpirationMonth()">Search By Item Expiration Month</button>
+                    <br/>
+                    <br/>
+                    <input type="text" id="expirationYear" placeholder="Expiration Year">
+                    <br/>
+                    <button onclick="searchByExpirationYear()">Search By Item Expiration Year</button>
+                    <br/>
+                    <br/>
+                    <input type="text" id="recipeName" placeholder="Recipe Name">
+                    <button onclick="searchByRecipe()">Search By Recipe Name</button>
+                </div>
+                
+                <div id="results" class="results">
+                    <h3 style="color: black;">Results</h3>
+                    <h5>Search Results</h5>
+                    <ul id="ulItems"></ul>
+                    <h5>Added Results</h5>
+                    <div id="added"></div>
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>

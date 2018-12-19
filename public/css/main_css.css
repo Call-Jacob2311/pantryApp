@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #c94b4b;
+}
+
+.container {
+    position: relative;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c94b4b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.main-body {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #4b134f;
+    color: white;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+input[type='text']{
+    text-align:center;
+}
+
+.controller1 {
+}
+
+.controller2 {
+
+}
+
+.controller3 {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 250px;
+    border: 3px solid black;
+    background-color: white;
+}
+
+.results {
+    position: fixed;
+    top: 450px;
+    left: 0;
+    width: 250px;
+    height: 130px;
+    border: 3px solid black;
+    background-color: white;
+    overflow: scroll;
+    color: black;
+}
+
+li {
+    color: black;
+}
+
+@media only screen and (max-width: 900px) {
+    .controller3 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 250px;
+    }
+    
+    .results {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 130px;
+    }
+}
